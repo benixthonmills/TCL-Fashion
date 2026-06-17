@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TCL Fashion — Dresses for Your Moment</title>
+<meta name="description" content="Prom, wedding guest, graduation and party dresses. Find the dress for your moment.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- Announcement marquee -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span>PROM '26 IS HERE</span>
+    <span>★</span>
+    <span>NEW DROPS WEEKLY</span>
+    <span>★</span>
+    <span>WEDDING GUEST EDIT</span>
+    <span>★</span>
+    <span>FREE SHIPPING OVER €60</span>
+    <span>★</span>
+    <span>PROM '26 IS HERE</span>
+    <span>★</span>
+    <span>NEW DROPS WEEKLY</span>
+    <span>★</span>
+    <span>WEDDING GUEST EDIT</span>
+    <span>★</span>
+    <span>FREE SHIPPING OVER €60</span>
+    <span>★</span>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="site-header">
+  <div class="site-header__inner">
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <a href="#" class="logo">TCL<span class="logo__dot">.</span></a>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="#occasions" data-tag="prom">Prom</a>
+      <a href="#occasions" data-tag="wedding">Wedding Guest</a>
+      <a href="#occasions" data-tag="graduation">Graduation</a>
+      <a href="#occasions" data-tag="party">Party</a>
+      <a href="#new-in">New In</a>
+    </nav>
+
+    <div class="header-icons">
+      <button class="icon-btn" aria-label="Search">
+        <svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <button class="icon-btn bag-btn" id="bagBtn" aria-label="Shopping bag">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M6 8h12l-1 12H7L6 8Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 8V6a3 3 0 1 1 6 0v2" stroke="currentColor" stroke-width="2"/></svg>
+        <span class="bag-count" id="bagCount">0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero__media">
+    <div class="hero__panel hero__panel--a"></div>
+    <div class="hero__panel hero__panel--b"></div>
+    <div class="hero__panel hero__panel--c"></div>
+  </div>
+  <div class="hero__content">
+    <p class="hero__eyebrow">THE 2026 OCCASION EDIT</p>
+    <h1 class="hero__title">Your moment<br>called for<br><em>this</em>.</h1>
+    <p class="hero__sub">Prom, weddings, graduation, nights out — dresses built for the moments you'll actually remember.</p>
+    <div class="hero__ctas">
+      <a href="#occasions" class="btn btn--primary">Shop the Edit</a>
+      <a href="#new-in" class="btn btn--ghost">New In</a>
+    </div>
+  </div>
+  <div class="hero__scroll-cue" aria-hidden="true">
+    <span></span>
+    Scroll
+  </div>
+</section>
+
+<!-- Occasion Strip -->
+<section class="occasions" id="occasions">
+  <div class="section-head">
+    <p class="eyebrow">SHOP BY OCCASION</p>
+    <h2>What's the moment?</h2>
+  </div>
+  <div class="occasion-grid">
+    <button class="occasion-card" data-filter="prom">
+      <div class="occasion-card__swatch occasion-card__swatch--prom"></div>
+      <span class="occasion-card__label">Prom</span>
+    </button>
+    <button class="occasion-card" data-filter="wedding">
+      <div class="occasion-card__swatch occasion-card__swatch--wedding"></div>
+      <span class="occasion-card__label">Wedding Guest</span>
+    </button>
+    <button class="occasion-card" data-filter="graduation">
+      <div class="occasion-card__swatch occasion-card__swatch--graduation"></div>
+      <span class="occasion-card__label">Graduation</span>
+    </button>
+    <button class="occasion-card" data-filter="party">
+      <div class="occasion-card__swatch occasion-card__swatch--party"></div>
+      <span class="occasion-card__label">Party</span>
+    </button>
+  </div>
+</section>
+
+<!-- Product Grid -->
+<section class="catalog" id="new-in">
+  <div class="section-head">
+    <p class="eyebrow">NEW IN</p>
+    <h2>Fresh off the rack</h2>
+    <div class="filter-row" id="filterRow">
+      <button class="filter-chip is-active" data-filter="all">All</button>
+      <button class="filter-chip" data-filter="prom">Prom</button>
+      <button class="filter-chip" data-filter="wedding">Wedding Guest</button>
+      <button class="filter-chip" data-filter="graduation">Graduation</button>
+      <button class="filter-chip" data-filter="party">Party</button>
+    </div>
+  </div>
+  <div class="product-grid" id="productGrid">
+    <!-- Product cards injected by JS -->
+  </div>
+</section>
+
+<!-- Brand strip -->
+<section class="brand-strip">
+  <div class="brand-strip__item">
+    <h3>Fast EU Shipping</h3>
+    <p>Dispatched from our Spain hub — most orders arrive in 3–5 days.</p>
+  </div>
+  <div class="brand-strip__item">
+    <h3>Easy Returns</h3>
+    <p>Didn't fit the moment? 14-day returns, no drama.</p>
+  </div>
+  <div class="brand-strip__item">
+    <h3>New Drops Weekly</h3>
+    <p>We're always sourcing the next dress you'll live in.</p>
+  </div>
+</section>
+
+<!-- Newsletter / CTA -->
+<section class="signup">
+  <div class="signup__inner">
+    <h2>Be first to know.</h2>
+    <p>New arrivals, restocks, and the occasional discount code. No spam, we promise.</p>
+    <form class="signup__form" id="signupForm">
+      <input type="email" placeholder="your@email.com" required aria-label="Email address">
+      <button type="submit" class="btn btn--primary">Join</button>
+    </form>
+    <p class="signup__note" id="signupNote"></p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="footer-col footer-col--brand">
+      <a href="#" class="logo logo--footer">TCL<span class="logo__dot">.</span></a>
+      <p>Dresses for the moments you get dressed up for. Based in Spain, made for everyone.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Shop</h4>
+      <a href="#occasions">Prom</a>
+      <a href="#occasions">Wedding Guest</a>
+      <a href="#occasions">Graduation</a>
+      <a href="#occasions">Party</a>
+    </div>
+    <div class="footer-col">
+      <h4>Help</h4>
+      <a href="#">Shipping & Returns</a>
+      <a href="#">Size Guide</a>
+      <a href="#">Contact Us</a>
+      <a href="#">Track Order</a>
+    </div>
+    <div class="footer-col">
+      <h4>Follow</h4>
+      <a href="#">Instagram</a>
+      <a href="#">TikTok</a>
+      <a href="#">Pinterest</a>
+    </div>
+  </div>
+  <div class="site-footer__bottom">
+    <p>&copy; 2026 TCL Fashion. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Quick view / cart drawer -->
+<div class="drawer" id="bagDrawer" aria-hidden="true">
+  <div class="drawer__overlay" id="drawerOverlay"></div>
+  <div class="drawer__panel">
+    <div class="drawer__header">
+      <h3>Your Bag</h3>
+      <button class="drawer__close" id="drawerClose" aria-label="Close bag">&times;</button>
+    </div>
+    <div class="drawer__items" id="drawerItems">
+      <p class="drawer__empty">Your bag is empty. Let's fix that.</p>
+    </div>
+    <div class="drawer__footer">
+      <div class="drawer__total">
+        <span>Subtotal</span>
+        <span id="drawerTotal">€0.00</span>
+      </div>
+      <a href="#" class="btn btn--primary btn--full" id="checkoutBtn">Checkout</a>
+      <p class="drawer__note">Shipping & taxes calculated at checkout.</p>
+    </div>
+  </div>
+</div>
+
+<script src="js/products.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
